@@ -1,0 +1,32 @@
+version = 1
+
+[[analyzers]]
+name = "test-coverage"
+
+[[analyzers]]
+name = "javascript"
+
+  [analyzers.meta]
+  plugins = [
+    "vue",
+    "react",
+    "angular",
+    "angularjs"
+  ]
+  environment = [
+    "jquery",
+    "nodejs",
+    "browser"
+  ]
+
+[[analyzers]]
+name = "sql"
+
+[[analyzers]]
+name = "php"
+
+[[transformers]]
+name = "prettier"
+
+[[transformers]]
+name = "standardjs"
