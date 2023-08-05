@@ -1,13 +1,13 @@
 /*!
 * HHH - Agency v7.0.12 (https://startbootstrap.com/theme/agency)
-* Copyright 2013-2023 Start Bootstrap
+* Copyright 2013-2023 
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-agency/blob/master/LICENSE)
 */
 //
 // Scripts
 // 
 
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', _event => {
 
     // Navbar shrink function
     var navbarShrink = function () {
@@ -33,8 +33,8 @@ window.addEventListener('DOMContentLoaded', event => {
     const mainNav = document.body.querySelector('#mainNav');
     if (mainNav) {
         new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+            target: '#mainNav'
+        
         });
     };
 
@@ -51,4 +51,17 @@ window.addEventListener('DOMContentLoaded', event => {
         });
     });
 
+});
+window.addEventListener('DOMContentLoaded', (event) => {
+    if(window.location.hash) {
+        var hash = window.location.hash;
+
+        if(hash === '#login') {
+            var loginModal = new bootstrap.Modal(document.getElementById('loginModal'));
+            loginModal.show();
+        } else if(hash === '#register') {
+            var registerModal = new bootstrap.Modal(document.getElementById('registerModal'));
+            registerModal.show();
+        }
+    }
 });
